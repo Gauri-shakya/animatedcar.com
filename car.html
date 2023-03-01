@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated car</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+.cont{
+    animation: shakebody 10s linear infinite;
+}
+.sky{
+    background-image: url("background.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    position: relative;
+  
+}
+.trees{
+    background-image: url("trees.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+       top: -14rem;;
+    
+}
+.track{
+    background-image: url("track.png");
+    height: 40vh;
+    width: 800vw;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 94vh;
+    animation: trackmove linear 6s infinite;
+}
+.car{
+    background-image: url("car_body.png");
+   
+     height: 100px;
+    width: 320px;
+    background-size: cover;
+    position: absolute;
+    left: 16rem;
+    bottom: 2.1rem;
+   
+    animation: carmove .6s linear infinite;
+}
+.wheel-left{
+    background-image: url("car_wheel_left.png");
+    background-size: cover;
+    height: 61px;
+    width: 69px;
+    position: absolute;
+    top: 2.5rem;
+    left: 41px;
+animation: wheelrotate .6s linear infinite;
+}
+@keyframes wheelrotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.wheel-right{
+    background-image: url("car_wheel_right.png");
+    background-size: cover;
+    height: 67px;
+    width: 73px;
+    position: absolute;
+    left: 13.5rem;
+    top: 2.3rem;
+    animation: wheelrotate .6s linear infinite;
+}
+@keyframes trackmove{
+    100%{
+        transform: translateX(-550vw);
+    }
+}
+@keyframes carmove{
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+@keyframes shakebody {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+    
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sky">
+        <div class="cont">
+        <div class="trees">
+            <div class="car">
+                <div class="wheel-left"></div>
+                <div class="wheel-right">
+            
+                </div>
+            </div>
+            <div class="track">
+            </div>
+        </div>
+    
+    </div>
+  </div> 
+  <script>
+    var audio=document.createElement("audio");
+    audio.setAttribute('src','sound.mp3');
+    audio.loop=true;
+    // audio.play();
+  </script> 
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background: linear-gradient(169deg, rgb(52 52 153 / 50%) 32%, rgb(159 156 199 / 42%) 100%, rgb(0 212 255 / 27%) 100%); */
+
+/* background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+        }
+        .card{
+            border: 2px solid white;
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: white;
+           
+            box-shadow: 3px 2px 20px 13px rgb(9 148 225 / 22%), -10px -10px 20px rgb(0 212 255 / 2%);
+        }
+        .girl-img{
+            height: 190px;
+    width: 18.78rem;
+    object-fit: cover;
+    border-radius: 10px;
+        }
+        .name{
+            font-size: 19px;
+            padding-top: 19px;
+            text-align: center;
+    font-family: ui-serif;
+    color: #26b1db;
+        }
+        .list-item{
+            padding-top: 30px;
+            list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+        }
+        .list-item li{
+            border: 2px solid rgb(243, 237, 237);
+            margin-right: 30px;
+    border-radius: 33%;
+    min-width: 35px;
+    min-height: 32px;
+    text-align: center;
+    /* box-shadow: 5px 2px 5px ,-10px -10px 20px rgba(77, 175, 228, 0.1),inset -5px -5px 15px rgba(9,148,225,0.5); */
+    box-shadow: 3px 2px 20px 10px rgb(9 148 225 / 22%), -31px -10px 20px rgb(0 212 255 / 2%);
+        }
+        .icons{
+            position: relative;
+            top: 7px;
+    left: 1px;
+    font-weight: 700;
+    color: #26b1db;}
+        /* }
+        .list-item :nth-child(2){
+            background-color: red;
+        }*/
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img-b">
+                <img src="img1.jpg" alt="img" class="girl-img">
+            </div>
+            <div class="name">
+                <h3>MS. SNEHA SINHA</h3>
+                <p>Web Developer</p>
+            </div>
+            <ul class="list-item">
+            <li><a href=""><i class="fa-brands fa-facebook-f icons" ></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram icons" ></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter icons"></i></a></li></ul>
+
+        </div>
+    </div>
+</body>
+</html>
